@@ -1,0 +1,439 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    /* height:100vh; */
+    /* width: 100vw; */
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+
+}
+
+.pokedexContainer{
+    width: 100%;
+    /* background-color: rgb(97, 169, 169); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 2rem;
+}
+
+.contHr{
+    width: 60%;
+    height: 0.5px;
+    background-color: #666;
+    /* border: 0.5px solid #666; */
+}
+.pokeBall{
+    width: 50px;
+    height: 50px;
+}
+
+.pokeListWrapper{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    
+    
+}
+
+.pokemonImg{
+    width: 100px;
+    height: 100px;
+}
+
+.card{
+    width: 300px;
+    background-color: rgb(211, 231, 231);
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid #666;
+    margin: 30px 10px 10px 10px;
+    padding: 10px;
+    cursor: pointer;
+
+}
+
+.pokeDataImg{
+  width: 150px;
+  height: 150px;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.name{
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 1 rem;
+    text-transform: capitalize;
+}
+
+.number{
+    margin-bottom: 10px;
+}
+
+.type{
+  font-size: 0.8rem;
+  
+}
+
+
+.rock {
+    background-color: rgb(166, 96, 96);
+  }
+  .ghost {
+    background-color: rgb(247, 247, 247);
+  }
+  .electric {
+    background-color: rgb(255, 255, 161);
+  }
+  .bug {
+    background-color: #F6D6A7;
+  }
+  .poison {
+    background-color: #e7b9f9;
+  }
+  .normal {
+    background-color: #F4F4F4;
+  }
+  .fairy {
+    background-color: rgba(255, 202, 210, 0.863);
+  }
+  .fire {
+    background-color: #FBE3DF;
+  }
+  .grass {
+    background-color:#E2F9E1;
+  }
+  .water {
+    background-color:#E0F1FD;
+  }
+
+  .btn{
+    width: 10rem;
+    background-color: crimson;
+    color: #fff;
+    padding: 1.2rem 0.8rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 15px;
+    cursor: pointer;
+
+  }
+
+  .close-icon{
+    font-size: 50;
+    position: absolute;
+    color: crimson;
+    right: 2rem;
+    top: 2rem;
+    cursor: pointer;
+  }
+
+  .buttons{
+    display: flex;
+    gap: 2rem;
+  }
+
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+
+
+  .modalContainer{
+    position: fixed;
+    top: 20vh;
+    left: 17%;
+    width: 65%;
+    /* height: 55%; */
+    padding: 1rem;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    animation: slide-down 300ms ease-out forwards;
+    background-color :azure;
+    z-index: 30 ;
+  }
+
+  .modalWrapper{
+    display: flex;
+    justify-content: center;
+  }
+
+  .left, .stats{
+    flex: 1;
+  }
+
+  .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem;
+    /* background-color: brown; */
+  }
+
+  
+
+  
+
+  
+
+  .modal-img{
+    height: 15rem;
+    width: 20rem;
+    align-self: center;
+  }
+
+  .modal-number{
+    font-size: 2rem;
+    text-align: center;
+    
+
+  }
+
+  .modal-name{
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 2.4rem;
+    text-align: center;
+    
+  }
+
+  .hr{
+    width: 0;
+    height: 0;
+    overflow: none;
+  }
+
+  .loading-gif{
+    width: 200px;
+    height: 200px;
+    margin: 50vh auto;
+  }
+
+ 
+
+  .statsTitle{
+    text-align: center;
+    margin: 2rem;
+  }
+
+  .abilitiesTag{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-ability{
+    background-color: crimson;
+    /* height: 2rem; */
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 10px;
+    padding: 0.5rem;
+  }
+
+
+  .statsTag{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 30px;
+  }
+
+  .stat-ability{
+    background-color: limegreen;
+    /* height: 2rem; */
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 10px;
+    padding: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .modal {
+      width: 40rem;
+      left: calc(50% - 18rem);
+    }
+    
+
+  
+  }
+
+  @media (max-width : 1228px){
+    .abilityTag{
+      font-size: 0.9rem;
+    }
+
+    .abilitiesTag{
+      gap : 1rem
+    }
+  }
+
+  @media (max-width: 988px) {
+
+    .hr{
+      display: block;
+      width: 50%;
+      color: #666;
+      margin: 0.3rem auto;
+    }
+
+    
+
+    .modal {
+      width: 30rem;
+      left: calc(50% - 20rem);
+    }
+
+    .modal-img{
+      height: 8rem;
+      width: 10rem;
+      align-self: center;
+    }
+  
+    .modal-number{
+      font-size: 1.5rem;
+      text-align: center;
+  
+    }
+  
+    .modal-name{
+      font-weight: 600;
+      text-transform: capitalize;
+      font-size: 1.6rem;
+      text-align: center;
+      
+    }
+
+    .modalWrapper{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+    }
+
+    .statsTag{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0.4rem;
+      margin: 20px;
+    }
+    
+    .statsTitle{
+      font-size: 1.4rem;
+      margin: 0.6rem;
+    }
+  
+    .stat-ability{
+      background-color: limegreen;
+      /* height: 2rem; */
+      color: #fff;
+      font-size: 0.8rem;
+      border-radius: 8px;
+      padding: 0.4rem;
+      display: flex;
+      gap: 0.6rem;
+    }
+
+    .left{
+      gap: 1rem;
+      margin: 0.2rem 0;
+      align-items: center;
+    }
+
+    .abilitiesTag{
+      gap :0.8rem;
+    }
+
+  
+
+  
+  }
+
+  @media (max-width : 585px){
+
+    .hr{
+      display: block;
+      width: 50%;
+      color: #666;
+      margin: 0.5rem auto;
+    }
+
+    
+    .abilityTag{
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .stat-ability{
+      font-size: 0.6rem;
+      gap: 0.4rem;
+    }
+
+    .modal-number{
+      font-size: 1.5rem;
+      text-align: center;
+  
+    }
+  
+    .modal-name{
+      font-weight: 600;
+      text-transform: capitalize;
+      font-size: 1.2rem;
+      text-align: center;
+      
+    }
+  
+    .statsTitle{
+      text-align: center;
+      margin: 1.2rem;
+      font-size: 1.2rem;
+    }
+
+  }
+  
+  @keyframes slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(-3rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
