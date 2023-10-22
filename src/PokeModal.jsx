@@ -1,9 +1,8 @@
 import React from "react";
 import { Close } from "@mui/icons-material";
-
 export default function PokeModal({Info, hideModal}) {
 
-    // console.log(Info)
+
   return (
     <>
         {Info ? 
@@ -40,7 +39,6 @@ export default function PokeModal({Info, hideModal}) {
                         </div>
 
                         <div className="statsTag">
-                        
                             {Info.stats.map((item) => {
                                 return(
                                     <>

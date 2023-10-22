@@ -8,12 +8,20 @@
 .container{
     /* height:100vh; */
     /* width: 100vw; */
-    background-color: #fff;
+    background-color: #f8f9fa;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px;
+    /* margin: 10px; */
 
+}
+
+.search-box{
+  border: 0.5px solid #888;
+  padding: 12px 24px;
+  min-width: 500px;
+  margin-top: 20px;
+  border-radius: 20px;
 }
 
 .pokedexContainer{
@@ -23,7 +31,7 @@
     align-items: center;
     justify-content: center;
     padding: 10px;
-    gap: 2rem;
+    /* gap: 2rem; */
 }
 
 .contHr{
@@ -38,11 +46,14 @@
 }
 
 .pokeListWrapper{
-    width: 70%;
+    max-width: 80%;
     display: flex;
     flex-wrap: wrap;
+    gap: 2rem;
+    /* flex-wrap: wrap; */
     justify-content:center;
     align-items: center;
+    margin-top: 30px;
     
     
 }
@@ -55,14 +66,15 @@
 .card{
     width: 300px;
     background-color: rgb(211, 231, 231);
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     display: flex;
     flex-direction: column;
+    /* gap: 1.5rem; */
     align-items: center;
     justify-content: center;
     border-radius: 10px;
     border: 1px solid #666;
-    margin: 30px 10px 10px 10px;
+    /* margin: 30px 10px 10px 10px; */
     padding: 10px;
     cursor: pointer;
 
@@ -231,13 +243,6 @@
     height: 0;
     overflow: none;
   }
-
-  .loading-gif{
-    width: 200px;
-    height: 200px;
-    margin: 50vh auto;
-  }
-
  
 
   .statsTitle{
@@ -280,6 +285,15 @@
     padding: 0.5rem;
     display: flex;
     gap: 0.5rem;
+  }
+
+  .loader{
+    background-image: url(./loading.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height:300px;
+    width: 300px;
+    margin: 50px 0;
   }
 
   @media (min-width: 768px) {
